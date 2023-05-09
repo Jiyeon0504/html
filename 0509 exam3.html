@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #text {
+      text-align: center;
+      font-size: 50px;
+      padding: 25%;
+    }
+  </style>
+  <body>
+    <div id="text">
+      <script>
+        function changeColor(color) {
+          let text = document.getElementById("text");
+          alert(`${color}`+ "색상으로 변경합니다");
+          text.style.color=color;
+
+        }
+        let text = prompt("텍스트를 입력하세요");
+        if (text === null) {
+          alert("텍스트를 입력해주세요");
+          let text = prompt("텍스트를 입력하세요");
+        } else {
+          document.getElementById("text").textContent = text;
+        }
+      </script>
+
+      <br />
+
+      <input type="button" value="빨강" onclick="changeColor('red')" />
+      <input type="button" value="파랑" onclick="changeColor('blue')" />
+      <input type="button" value="초록" onclick="changeColor('green')" />
+    </div>
+  </body>
+</html>

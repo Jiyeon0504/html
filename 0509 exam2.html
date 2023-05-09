@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function num(){
+            let number1;
+            number1 = prompt("숫자를 입력하세요");
+            if(isNaN(number1)===true){
+                alert("숫자를 입력해주세요");
+            }
+            else if(number1<100&&number1>0){
+                for(var i=1;i<=100;i++){
+                    console.log(i);
+                }
+                alert('완료되었습니다.')
+            }
+            else{
+                alert("1이상 100이하 숫자를 입력해주세요");
+            }
+            
+        }
+</script>
+<div onclick="javascript:num()">눌러서 숫자 입력하기</div>
+
+</body>
+</html>
