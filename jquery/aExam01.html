@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function join() {
+        let membership = true;
+
+        let id = $("#id").val();
+        
+        
+        let password = $("#pass").val();
+        let gender = $("#radio0").val();
+        console.log(`id:${id}, password:${password}, gender:${gender}`);
+        let hobby = $('#hobby:checked').length
+        let job = $('name=job')
+        
+      }
+    </script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      아이디
+      <input type="email" name="id" id="id" /><br />
+      비밀번호
+      <input type="password" id="pass" required minlength="5" /><br />
+      성별
+      <label for="radio1">남자</label>
+      <input type="radio" id="radio1" name="options" value="1" />
+      <label for="radio2">여자</label>
+      <input type="radio" id="radio2" name="options" value="2" /> <br />
+
+      <!--  <input type="radio" name="" id="" >남자 
+          <input type="radio" name="" id="" >여자 <br> -->
+      직업
+      <select name="job" required>
+        <option value="" class="option"></option>
+        <option value="" class="option">데이터분석가</option>
+        <option value="" class="option">프론트엔드개발자</option>
+        <option value="" class="option">백엔드개발자</option>
+      </select>
+      <br />
+      취미
+      <input type="checkbox" id="hobby" /> 개발
+      <input type="checkbox" id="hobby" /> 게임
+      <input type="checkbox" id="hobby" /> 낚시
+      <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="hobby" /> 운동
+      <input type="checkbox" id="hobby" /> 독서
+      <input type="checkbox" id="hobby" /> 음악감상
+
+      <br />
+      <input type="reset" value="취소" name="" id="" />
+      <input type="button" value="등록" onclick="join()" />
+      <!-- <input type="submit" value="회원가입" name="" id="" /> -->
+    </form>
+  </body>
+</html>
